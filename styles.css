@@ -1,21 +1,25 @@
 .flexContainer{
     display: flex;
+    height:100vh;
     /* flex-direction: column; */
     justify-content: center;
+    align-self: center;
 }
 .calcBody {
     display: flex; 
     width: 42vw;
     flex-direction: column;
     align-items: center;
-    font-size: larger;
+    align-self: center;
 
 }
-.displayScreen{
-    /* display: flex; */
-    flex:1 0 auto;
-    height: 20vh;
+#displayScreen{
+    display: flex;
+   /* flex:1 0 auto; */
+    height: 21vh;
     width: 35vw;
+    align-items: center;
+    justify-content: flex-end;
 }
 .keyPad{
     display: flex;
