@@ -27,7 +27,7 @@ div[class*=digitPad]{
     width: 21vw;
     flex-wrap: wrap;
 }
-div[id*=num] {
+button[id*=num] {
     display: flex;
     width: 7vw;
     aspect-ratio: 1/1;
@@ -44,7 +44,7 @@ div[id*=num] {
     display: flex; 
     flex-direction: column;
 }
-div[id*=opp]{
+button[id*=opp]{
     display: flex;
     flex: 1 0 auto;
     aspect-ratio: 1/1;
