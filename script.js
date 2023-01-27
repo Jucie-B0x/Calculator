@@ -1,23 +1,37 @@
-function add() {}
 
-function subtract() {}
+//event listeners
+document.querySelectorAll("button").forEach(function(element) {
+    element.addEventListener("click", findValue);
+})
 
-function divide() {}
 
-function multiply() {}
+function add(a,b) {
+    return sum = a + b;
+}
+
+function subtract(a, b) {
+    return difference = a - b;
+}
+
+function multiply(a, b) {
+    return product = a * b;
+}
+
+function divide(a,b) {
+    return quotient = a / b;
+}
+
+function findValue(){
+    let buttonValue = this.textContent || this.innerText;
+    let temp = buttonValue;
+    display(temp);
+    
+
+}
 
 function operate() {}
 
-function display(value) {
-    const screen = document.querySelector("displayScreen");
-  
-}
-
-//event listeners
-const buttons = document.querySelectorAll('[id^="num"]');
-// console.log(buttons);
-for (const button of buttons) {
-  button.addEventListener("click", function(e){
-    console.log(e);
-  });
+function display(equation) {
+    let screen = document.querySelector(".displayScreen")
+    screen.write(equation);
 }
