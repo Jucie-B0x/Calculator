@@ -1,37 +1,46 @@
-
 //event listeners
-document.querySelectorAll("button").forEach(function(element) {
-    element.addEventListener("click", findValue);
-})
+document.querySelectorAll("button").forEach(function (element) {
+  element.addEventListener("click", findValue);
+});
 
-
-function add(a,b) {
-    return sum = a + b;
+function add(a, b) {
+  display(a + b);
 }
 
 function subtract(a, b) {
-    return difference = a - b;
+  display(a - b);
 }
 
 function multiply(a, b) {
-    return product = a * b;
+  display(a * b);
 }
 
-function divide(a,b) {
-    return quotient = a / b;
+function divide(a, b) {
+  display(a / b);
 }
 
-function findValue(){
-    let buttonValue = this.textContent || this.innerText;
-    let temp = buttonValue;
-    display(temp);
-    
-
+function findValue() {
+  return buttonValue = this.textContent || this.innerText;
 }
 
-function operate() {}
+function operate(operator, num1, num2) {
+    switch(operator) {
+        case "+":
+            add(num1, num2);
+            break;
+        case "-" :
+            subtract(num1,num2);
+            break;
+        case "*" :
+            multiply(num1,num2);
+            break;
+        case "/" :
+            divide(num1, num2);
+            break;
+    } 
+}
 
 function display(equation) {
-    let screen = document.querySelector(".displayScreen")
-    screen.write(equation);
+  let screen = document.querySelector("#displayScreen");
+  return (screen.innerHTML = equation);
 }
