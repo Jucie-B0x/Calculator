@@ -15,13 +15,14 @@
 }
 #displayScreen{
     display: flex;
+    flex-direction: column;
    /* flex:1 0 auto; */
    box-sizing: border-box;
    padding: 7px;
-    height: 14vh;
+    height: 14vw;
     width: 42vw;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-around;
 }
 .keyPad{
     display: flex;
@@ -46,7 +47,7 @@
 
 
 
-button[id*=num] {
+button[id^=num] {
     display: flex;
     width: 7vw;
     aspect-ratio: 1/1;
