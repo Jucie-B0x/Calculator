@@ -16,8 +16,10 @@
 #displayScreen{
     display: flex;
    /* flex:1 0 auto; */
-    height: 21vh;
-    width: 35vw;
+   box-sizing: border-box;
+   padding: 7px;
+    height: 14vh;
+    width: 42vw;
     align-items: center;
     justify-content: flex-end;
 }
@@ -25,12 +27,25 @@
     display: flex;
     flex-wrap: wrap;
 }
-div[class*=digitPad]{
+
+#oppClear,
+#oppEnter{
+    flex: 2 1 auto
+}
+.clearDel,
+.digitPadRowOne,
+.digitPadRowTwo,
+.digitPadRowThree,
+.digitPadRowFour
+{
     justify-content: left;
     display: flex;
-    width: 21vw;
+    width: 28vw;
     flex-wrap: wrap;
 }
+
+
+
 button[id*=num] {
     display: flex;
     width: 7vw;
@@ -39,10 +54,7 @@ button[id*=num] {
     align-items: center;
     
 }
-#num0{
-    aspect-ratio: auto;
-    width: 14vw;
-}
+
 
 .operators{
     display: flex; 
@@ -50,9 +62,9 @@ button[id*=num] {
 }
 button[id*=opp]{
     display: flex;
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
     aspect-ratio: 1/1;
-    width: 5vw;
+    height: 7vw;
     justify-content: center;    
     align-items: center;
 }
